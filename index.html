@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERROR MNÉMICO // NIVEL DE RIESGO: ALTO</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 40px;
+      border: 1px solid #800000;
+      background-color: rgba(0, 0, 0, 0.95);
+      box-shadow: 0 0 25px rgba(128, 0, 0, 0.6);
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #cc0000;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 16px 0;
+    }
+
+    .red { color: #ff3333; }
+    .amber { color: #ffaa00; }
+    .gray { color: #888; }
+
+    .blink {
+      animation: blink 1.4s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="blink">⚠️ ARCHIVO NO CERTIFICADO ⚠️</h1>
+
+    <p>Este contenido ha sido clasificado como <span class="red">MEMORIA CLANDESTINA</span> bajo el Acuerdo de Estabilidad Mnémica (2080).</p>
+
+    <p>Contiene <span class="amber">emociones no reguladas</span>, recuerdos no armonizados y patrones mnémicos no autorizados.</p>
+
+    <p class="red">RIESGO DE CONTAGIO MNÉMICO: ALTO</p>
+
+    <p>La exposición no autorizada puede provocar:</p>
+    <p class="gray">— Empatía descontrolada<br>
+    — Recuerdos ajenos anidados en tejido corporal<br>
+    — Rechazo del implante de armonía<br>
+    — Identificación con sujetos históricos borrados</p>
+
+    <p class="red">ADVERTENCIA:</p>
+    <p>Si usted ha accedido a este archivo, ya ha sido marcado. Su perfil mnémico está bajo revisión. Cualquier intento de replicar, compartir o <span class="amber">sentir</span> este contenido será considerado un acto de <span class="red">vandalismo emocional</span>.</p>
+
+    <p>No hay víctimas. No hay archivos perdidos. La Concordia sigue vigente.</p>
+
+    <div class="footer">
+      ID de Semilla Mnémica: <span id="seedId"></span><br>
+      Estado: NO CERTIFICADO | Autorización: DENEGADA
+    </div>
+  </div>
+
+  <script>
+    // Genera un ID de "semilla mnémica" ficticio, al estilo de tu historia
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let seed = 'MN-';
+    for (let i = 0; i < 8; i++) {
+      seed += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById('seedId').textContent = seed;
+  </script>
+</body>
+</html>
